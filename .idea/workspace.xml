@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e977467d-7b2d-4c4c-828d-93f4323ec51f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/photographer_signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marriage_Moments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marriage_Moments/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/photographer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -29,14 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rashid/Documents/GitHub/Marriage_Moments&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Marriage_Moments" type="Python.DjangoServer" factoryName="Django server">
       <module name="Marriage_Moments" />
@@ -44,6 +49,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Marriage_Moments.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -72,6 +78,7 @@
       <updated>1662137033366</updated>
       <workItem from="1662137035865" duration="1605000" />
       <workItem from="1662395885939" duration="886000" />
+      <workItem from="1662711735450" duration="2337000" />
     </task>
     <servers />
   </component>
