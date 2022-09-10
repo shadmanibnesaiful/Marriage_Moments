@@ -63,7 +63,7 @@ def login(request):
         if User.objects.filter(username=username).exists():
             user = User.objects.get(username=username)
             usertype = user.user_type
-
+            print('testing on terminal')
             if usertype.type == 'customer':
                 print("redirecting to customer homepage")
                 pass
