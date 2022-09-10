@@ -16,5 +16,5 @@ def load_test(request):
     }
 
     # render paerge and send dictionary
-    return render(request, 'photographer_details/index.html', context)
+    return render(request, 'photographer_details/../templates/photographer/photographer_details.html', context)
 

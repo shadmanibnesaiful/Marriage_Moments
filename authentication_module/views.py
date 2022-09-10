@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 
 from photographer.models import *
 from .models import *
@@ -21,28 +21,54 @@ def load_test(request):
         new_photographer.save()
 
 
-    return render(request, 'photographer_details/photographer_signup.html')
+    return render(request, 'photographer_details/../templates/authentication/photographer_signup.html')
 def register_customer(request):
     if request.method == "POST":
         print(request.POST)
         name = request.POST['name']
         email = request.POST['email']
-        #password1 = request.POST['password1']
-        # password2 = request.POST['password2']
+        phone = request.POST['phone']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
         address = request.POST['address']
         age = request.POST['age']
         sex = request.POST['sex']
 
+        # #############################
+        # add phone number to customer
+        # ############################
         new_customer = Customer(name=name, email=email, age=age, address=address, sex=sex)
         new_customer.save()
 
-    return render(request, 'customer_details/customer_signup.html')
+        usertype = UserType.objects.get(type='customer')
+
+        new_user = User(user_type=usertype, username= phone, password = password1, actual_id=new_customer.id)
+        new_user.save()
+
+    return render(request, 'customer_details/../templates/authentication/customer_signup.html')
 
 def login(request):
+
     if request.method == "POST":
         print(request.POST)
-        email = request.POST['email']
-        password1 = request.POST['password1']
 
+        # username is the phone number of the user
+        username = request.POST['username']
+        password = request.POST['password']
+        print("here it is")
 
-    return render(request, 'login_page/login_page.html')
+        if User.objects.filter(username=username).exists():
+            user = User.objects.get(username=username)
+            usertype = user.user_type
+
+            if usertype.type == 'customer':
+                print("redirecting to customer homepage")
+                pass
+            elif usertype.type == 'photographer':
+                print('redirecting to photographer homepage')
+                pass
+
+        else:
+            return redirect(reverse('authentication_module:login'))
+
+    return render(request, 'authentication/login.html')
