@@ -21,7 +21,7 @@ def load_test(request):
         new_photographer.save()
 
 
-    return render(request, 'photographer_details/../templates/authentication/photographer_signup.html')
+    return render(request, 'authentication/photographer_signup.html')
 def register_customer(request):
     if request.method == "POST":
         print(request.POST)
@@ -37,7 +37,7 @@ def register_customer(request):
         # #############################
         # add phone number to customer
         # ############################
-        new_customer = Customer(name=name, email=email, age=age, address=address, sex=sex)
+        new_customer = Customer(name=name, email=email, age=age, address=address, sex=sex, phone=phone)
         new_customer.save()
 
         usertype = UserType.objects.get(type='customer')
@@ -45,7 +45,7 @@ def register_customer(request):
         new_user = User(user_type=usertype, username= phone, password = password1, actual_id=new_customer.id)
         new_user.save()
 
-    return render(request, 'customer_details/../templates/authentication/customer_signup.html')
+    return render(request, 'authentication/customer_signup.html')
 
 def login(request):
 
