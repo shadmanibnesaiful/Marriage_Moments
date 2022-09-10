@@ -26,6 +26,7 @@ urlpatterns = [
     path('', photographer.views.load_test),
     path('authentication/', include('authentication_module.urls', namespace='authentication_module')),
     path('customer/', include('customer.urls', namespace='customer')),
+    path('photographer/', include('photographer.urls', namespace='photographer')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
