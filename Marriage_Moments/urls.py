@@ -23,9 +23,7 @@ import photographer.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', photographer.views.load_test),
     path('', photographer.views.load_test),
-    path('signup/', authentication_module.views.load_test),
     path('authentication/', include('authentication_module.urls', namespace='authentication_module')),
 ]
 

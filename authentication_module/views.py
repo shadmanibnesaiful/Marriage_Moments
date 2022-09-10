@@ -34,9 +34,6 @@ def register_customer(request):
         age = request.POST['age']
         sex = request.POST['sex']
 
-        # #############################
-        # add phone number to customer
-        # ############################
         new_customer = Customer(name=name, email=email, age=age, address=address, sex=sex, phone=phone)
         new_customer.save()
 

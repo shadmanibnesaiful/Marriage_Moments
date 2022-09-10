@@ -7,6 +7,8 @@ from django.db import models
 class UserType(models.Model):
     type = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.type
 
 class User(models.Model):
     user_type = models.ForeignKey(UserType, on_delete=models.CASCADE)
@@ -14,6 +16,8 @@ class User(models.Model):
     password = models.CharField(max_length=30)
     actual_id = models.IntegerField()
 
+    def __str__(self):
+        return self.username
 
 class Photographer(models.Model):
     name = models.CharField(max_length=30)
@@ -25,6 +29,8 @@ class Photographer(models.Model):
     bio = models.CharField(max_length=300)
     photo = models.ImageField(null=True)
 
+    def __str__(self):
+        return self.name + " | " + self.phone
 
 class Customer(models.Model):
     name = models.CharField(max_length=30)
@@ -34,6 +40,8 @@ class Customer(models.Model):
     address = models.CharField(max_length=200, null=True)
     sex = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.name + " | " + self.phone
 
 class Portfolio(models.Model):
     photographer = models.ForeignKey(Photographer, on_delete=models.CASCADE)
