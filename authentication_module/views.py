@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse
 from photographer.models import *
 from .models import *
 
+
 def register_photographer(request):
     if request.method == "POST":
         print(request.POST)
@@ -17,7 +18,6 @@ def register_photographer(request):
         bio = request.POST['bio']
 
         new_photographer = Photographer(name=name, email=email, phone=phone, address=address, age=age, sex=sex, bio=bio)
-
         new_photographer.save()
 
         usertype = UserType.objects.get(type='photographer')
@@ -25,8 +25,9 @@ def register_photographer(request):
         new_user = User(user_type=usertype, username=phone, password=password1, actual_id=new_photographer.id)
         new_user.save()
 
-
     return render(request, 'authentication/photographer_signup.html')
+
+
 def register_customer(request):
     if request.method == "POST":
         print(request.POST)
@@ -44,13 +45,13 @@ def register_customer(request):
 
         usertype = UserType.objects.get(type='customer')
 
-        new_user = User(user_type=usertype, username= phone, password = password1, actual_id=new_customer.id)
+        new_user = User(user_type=usertype, username=phone, password=password1, actual_id=new_customer.id)
         new_user.save()
 
     return render(request, 'authentication/customer_signup.html')
 
-def login(request):
 
+def login(request):
     if request.method == "POST":
         print(request.POST)
 
