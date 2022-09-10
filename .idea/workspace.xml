@@ -5,10 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marriage_Moments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photographer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customer/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customer/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photographer/photographer_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photographer/photographer_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,8 @@
       <workItem from="1662711735450" duration="21230000" />
       <workItem from="1662839780116" duration="481000" />
       <workItem from="1662840297008" duration="838000" />
-      <workItem from="1662841152097" duration="303000" />
+      <workItem from="1662841152097" duration="466000" />
+      <workItem from="1662841671417" duration="55000" />
     </task>
     <servers />
   </component>

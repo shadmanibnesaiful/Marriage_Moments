@@ -16,8 +16,9 @@ def register_photographer(request):
         age = request.POST['age']
         sex = request.POST['sex']
         bio = request.POST['bio']
+        photo = request.FILES['image_select']
 
-        new_photographer = Photographer(name=name, email=email, phone=phone, address=address, age=age, sex=sex, bio=bio)
+        new_photographer = Photographer(name=name, email=email, phone=phone, address=address, age=age, sex=sex, bio=bio, photo=photo)
         new_photographer.save()
 
         usertype = UserType.objects.get(type='photographer')
