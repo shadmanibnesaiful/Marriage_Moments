@@ -5,9 +5,11 @@ from photographer.models import *
 
 def home_page(request):
     customer = Customer.objects.get(id=1)
-    # logical code
 
-    # dictionary
+    photographers = Photographer.objects.all()
 
-    # render paerge and send dictionary
-    return render(request, 'customer/home.html')
+    context = {
+        'photographers' : photographers
+    }
+
+    return render(request, 'customer/home.html', context)
