@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e977467d-7b2d-4c4c-828d-93f4323ec51f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication_module/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_module/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +103,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

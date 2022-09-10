@@ -16,7 +16,7 @@
         </h1>
     </div>
     
-    <form class="row g-3 my-5" method="post" action="{% url 'authentication_module:signup_photographer' %}">
+    <form class="row g-3 my-5" method="post" action="{% url 'authentication_module:signup_photographer' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="col-12">
             <label for="inputEmail4" class="form-label">Name</label>
