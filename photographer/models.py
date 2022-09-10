@@ -41,7 +41,7 @@ class Customer(models.Model):
     sex = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.name + " | " + self.phone
+        return self.name
 
 class Portfolio(models.Model):
     photographer = models.ForeignKey(Photographer, on_delete=models.CASCADE)
