@@ -20,20 +20,18 @@ class Photographer(models.Model):
     phone = models.CharField(max_length=20)
     email = models.EmailField()
     age = models.IntegerField()
-    country = models.CharField(max_length=20)
+    address = models.CharField(max_length=200, null=True)
     sex = models.CharField(max_length=10)
     bio = models.CharField(max_length=300)
-    photo = models.ImageField()
+    photo = models.ImageField(null=True)
 
 
 class Customer(models.Model):
     name = models.CharField(max_length=30)
-    phone = models.CharField(max_length=20)
     email = models.EmailField()
     age = models.IntegerField()
-    country = models.CharField(max_length=20)
+    address = models.CharField(max_length=200, null=True)
     sex = models.CharField(max_length=10)
-    photo = models.ImageField()
 
 
 class Portfolio(models.Model):

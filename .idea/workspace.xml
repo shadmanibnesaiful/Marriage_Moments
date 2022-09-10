@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e977467d-7b2d-4c4c-828d-93f4323ec51f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/photographer_signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/customer_details/customer_signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login_page/login_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login_page/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marriage_Moments/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marriage_Moments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication_module/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_module/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication_module/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_module/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photographer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/photographer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photographer_signup.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -33,16 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rashid/Documents/GitHub/Marriage_Moments&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Rashid/Documents/GitHub/Marriage_Moments",
+    "list.type.of.created.stylesheet": "CSS"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JavaScript Debug.login_page.html">
+    <configuration name="login_page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Marriage_Moments/templates/login_page/login_page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Marriage_Moments" type="Python.DjangoServer" factoryName="Django server">
       <module name="Marriage_Moments" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,6 +77,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.login_page.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +93,7 @@
       <updated>1662137033366</updated>
       <workItem from="1662137035865" duration="1605000" />
       <workItem from="1662395885939" duration="886000" />
-      <workItem from="1662711735450" duration="2337000" />
+      <workItem from="1662711735450" duration="16541000" />
     </task>
     <servers />
   </component>
