@@ -9,5 +9,5 @@ from . import views
 app_name = 'customer'
 
 urlpatterns = [
-    path('', views.home_page, name='customer_home')
+    path('', views.home, name='home'),
 ]

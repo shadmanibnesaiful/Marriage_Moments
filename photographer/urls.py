@@ -9,6 +9,7 @@ import photographer.views
 app_name = 'photographer'
 
 urlpatterns = [
+    path('', photographer.views.home, name='home'),
     path('details/<slug:id>/', photographer.views.photographer_details, name='photographer-details')
 ]
 

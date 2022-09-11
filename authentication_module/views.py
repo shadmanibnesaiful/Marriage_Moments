@@ -67,10 +67,10 @@ def login(request):
             print('testing on terminal')
             if usertype.type == 'customer':
                 print("redirecting to customer homepage")
-                pass
+                return redirect(reverse('customer:home'))
             elif usertype.type == 'photographer':
                 print('redirecting to photographer homepage')
-                pass
+                return redirect(reverse('photographer:home'))
 
         else:
             return redirect(reverse('authentication_module:login'))

@@ -5,21 +5,8 @@ from .models import *
 
 # Create your views here.
 
-
-def load_test(request):
-    customer = Customer.objects.get(id=1)
-    # logical code
-
-    # dictionary
-    context = {
-        'name': 'Rashid',
-        'age': 25,
-        'customer': customer
-    }
-
-    # render paerge and send dictionary
-    return render(request, 'photographer/photographer_details.html', context)
-
+def home(request):
+    return render(request, 'photographer/dashboard.html', {})
 
 def photographer_details(request, id):
     print('this function called')
@@ -29,6 +16,6 @@ def photographer_details(request, id):
 
     context = {
         'photographer': photographer,
+        'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
     }
-
     return render(request, 'photographer/photographer_details.html', context)
