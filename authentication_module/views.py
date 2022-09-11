@@ -77,6 +77,11 @@ def login(request):
         else:
             return redirect(reverse('authentication_module:login'))
 
+    elif 'phone' in request.session:
+        if Customer.objects.filter(phone=request.session['phone']).exists():
+            return redirect(reverse('customer:home'))
+        else:
+            return redirect(reverse('photographer:home'))
     return render(request, 'authentication/login.html')
 
 

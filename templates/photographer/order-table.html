@@ -5,6 +5,8 @@
         <th scope="col">Name</th>
         <th scope="col">Date</th>
         <th scope="col">Phone</th>
+        <th scope="col">Package</th>
+
     </tr>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
             <td>{{ order.customer.name }}</td>
             <td>{{ order.date }}</td>
             <td>{{ order.customer.phone }}</td>
+            <td>{{ order.package.name }}</td>
+
         </tr>
     {% endfor %}
 

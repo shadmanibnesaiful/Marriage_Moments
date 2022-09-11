@@ -1,6 +1,6 @@
 {% load static %}
 
-<form class="row row-cols-lg-auto g-3 align-items-center" method="post" action="{% url 'photographer:add-photo'%}" enctype="multipart/form-data">
+<form class="row row-cols-lg-auto g-3 align-items-center mt-3" method="post" action="{% url 'photographer:add-photo'%}" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="col-12">
         <label class="visually-hidden" for="inlineFormInputGroupUsername">Caption</label>

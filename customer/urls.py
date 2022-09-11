@@ -11,6 +11,6 @@ app_name = 'customer'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('book-photographer/<slug:id>', customer.views.book_photographer, name='book-photographer'),
+    path('book-photographer/', customer.views.book_photographer, name='book-photographer'),
 
 ]

@@ -14,19 +14,22 @@ def home(request):
         photographers = Photographer.objects.all()
 
         context = {
-            'photographers' : photographers
+            'photographers': photographers
         }
 
         return render(request, 'customer/home.html', context)
 
 
-def book_photographer(request, id):
+def book_photographer(request):
     print(f"book photographer confirmed {id}")
 
-    customer = Customer.objects.get(phone=request.session['phone'])
-    photographer = Photographer.objects.get(id=id)
+    if request.method == 'POST':
+        package_id = request.POST['package_id']
 
-    order = Order(photographer=photographer, customer=customer, date=datetime.today())
-    order.save()
+        customer = Customer.objects.get(phone=request.session['phone'])
+        photography_package = Photography_Package.objects.get(id=package_id)
+
+        order = Order(customer=customer, package=photography_package, date=datetime.today())
+        order.save()
 
     return redirect(reverse('customer:home'))

@@ -57,6 +57,6 @@ class Photography_Package(models.Model):
 
 
 class Order(models.Model):
-    photographer = models.ForeignKey(Photographer, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    package = models.ForeignKey(Photography_Package, on_delete=models.CASCADE, null=True)
     date = models.DateField()
