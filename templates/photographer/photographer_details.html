@@ -16,7 +16,7 @@
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#!">Marriage Moments</a>
+        <a class="navbar-brand" href="{% url 'customer:home' %}">Marriage Moments</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>
@@ -86,7 +86,7 @@
                 <section class="mb-5">
                     <p class="fs-5 mb-4">{{ photographer.name }} is a photographer based
                         on {{ photographer.address }}</p>
-                    <p class="fs-5 mb-4">He specializes in capturing beautiful moments of an wedding event</p>
+                    <p class="fs-5 mb-4">{{ photographer.bio }}</p>
                     <p>price range: 10,000 - 30,000 per event</p>
                     <p>time duration: 5 hours per event</p>
                 </section>

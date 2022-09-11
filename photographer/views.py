@@ -1,12 +1,20 @@
 from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import *
 
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'photographer/dashboard.html', {})
+    if 'phone' in request.session:
+        photographer = Photographer.objects.get(phone=request.session['phone'])
+        context = {
+            'photographer': photographer,
+        }
+    else:
+        context = {}
+    return render(request, 'photographer/dashboard.html', context)
+
 
 def photographer_details(request, id):
     print('this function called')
@@ -19,3 +27,16 @@ def photographer_details(request, id):
         'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
     }
     return render(request, 'photographer/photographer_details.html', context)
+
+
+def add_portfolio_photo(request):
+    photo = request.FILES['photo']
+    caption = request.POST['caption']
+
+    # fetch from session cookie
+    photographer = Photographer.objects.get(phone=request.session['phone'])
+
+    portfolio = Portfolio(photographer=photographer, caption=caption, photo=photo)
+    portfolio.save()
+
+    return redirect(reverse('photographer:home'))
