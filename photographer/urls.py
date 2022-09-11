@@ -9,7 +9,9 @@ import photographer.views
 app_name = 'photographer'
 
 urlpatterns = [
-    path('details/<slug:id>/', photographer.views.photographer_details, name='photographer-details')
+    path('', photographer.views.home, name='home'),
+    path('details/<slug:id>/', photographer.views.photographer_details, name='photographer-details'),
+    path('add-photo', photographer.views.add_portfolio_photo, name='add-photo'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

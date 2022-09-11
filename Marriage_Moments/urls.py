@@ -23,7 +23,7 @@ import photographer.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', photographer.views.load_test),
+    path('', authentication_module.views.login, name='login'),
     path('authentication/', include('authentication_module.urls', namespace='authentication_module')),
     path('customer/', include('customer.urls', namespace='customer')),
     path('photographer/', include('photographer.urls', namespace='photographer')),

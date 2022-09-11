@@ -3,7 +3,7 @@ from django.shortcuts import render
 from photographer.models import *
 
 
-def home_page(request):
+def home(request):
     customer = Customer.objects.get(id=1)
 
     photographers = Photographer.objects.all()

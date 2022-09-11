@@ -65,14 +65,31 @@ def login(request):
             user = User.objects.get(username=username)
             usertype = user.user_type
             print('testing on terminal')
-            if usertype.type == 'customer':
+            if usertype.type == 'customer' and user.password == password:
+                create_session(request, username)
                 print("redirecting to customer homepage")
-                pass
-            elif usertype.type == 'photographer':
+                return redirect(reverse('customer:home'))
+            elif usertype.type == 'photographer' and user.password == password:
+                create_session(request, username)
                 print('redirecting to photographer homepage')
-                pass
+                return redirect(reverse('photographer:home'))
 
         else:
             return redirect(reverse('authentication_module:login'))
 
     return render(request, 'authentication/login.html')
+
+
+
+def create_session(request, phone_num):
+    request.session['phone'] = phone_num
+    print('new session created')
+
+def delete_session(request):
+    request.session.flush()
+    request.session.clear_expired()
+
+def logout(request):
+    print('sessions deleted')
+    delete_session(request)
+    return redirect(reverse('authentication_module:login'))

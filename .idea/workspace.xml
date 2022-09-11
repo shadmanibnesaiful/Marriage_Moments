@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e977467d-7b2d-4c4c-828d-93f4323ec51f" name="Changes" comment="">
+
+      <change beforePath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Marriage_Moments.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marriage_Moments/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marriage_Moments/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication_module/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_module/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication_module/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_module/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photographer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photographer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photographer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/customer_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/customer_signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/photographer_signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customer/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customer/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photographer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photographer/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photographer/photographer_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photographer/photographer_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,14 +30,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,6 +56,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -85,6 +110,11 @@
       <workItem from="1662840297008" duration="838000" />
       <workItem from="1662841152097" duration="466000" />
       <workItem from="1662841671417" duration="55000" />
+      <workItem from="1662867992852" duration="1627000" />
+      <workItem from="1662869636954" duration="1247000" />
+      <workItem from="1662870900706" duration="14000" />
+      <workItem from="1662870952940" duration="594000" />
+      <workItem from="1662871578798" duration="708000" />
     </task>
     <servers />
   </component>
@@ -101,5 +131,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

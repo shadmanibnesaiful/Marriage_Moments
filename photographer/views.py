@@ -1,24 +1,19 @@
 from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import *
 
 
 # Create your views here.
 
-
-def load_test(request):
-    customer = Customer.objects.get(id=1)
-    # logical code
-
-    # dictionary
-    context = {
-        'name': 'Rashid',
-        'age': 25,
-        'customer': customer
-    }
-
-    # render paerge and send dictionary
-    return render(request, 'photographer/photographer_details.html', context)
+def home(request):
+    if 'phone' in request.session:
+        photographer = Photographer.objects.get(phone=request.session['phone'])
+        context = {
+            'photographer': photographer,
+        }
+    else:
+        context = {}
+    return render(request, 'photographer/dashboard.html', context)
 
 
 def photographer_details(request, id):
@@ -29,6 +24,19 @@ def photographer_details(request, id):
 
     context = {
         'photographer': photographer,
+        'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
     }
-
     return render(request, 'photographer/photographer_details.html', context)
+
+
+def add_portfolio_photo(request):
+    photo = request.FILES['photo']
+    caption = request.POST['caption']
+
+    # fetch from session cookie
+    photographer = Photographer.objects.get(phone=request.session['phone'])
+
+    portfolio = Portfolio(photographer=photographer, caption=caption, photo=photo)
+    portfolio.save()
+
+    return redirect(reverse('photographer:home'))
