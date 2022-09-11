@@ -12,6 +12,7 @@ def home(request):
         photographer = Photographer.objects.get(phone=request.session['phone'])
         context = {
             'photographer': photographer,
+            'orders': Order.objects.filter(photographer=photographer),
         }
         return render(request, 'photographer/dashboard.html', context)
 
@@ -28,6 +29,7 @@ def photographer_details(request, id):
         context = {
             'photographer': photographer,
             'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
+            'packages': Photography_Package.objects.filter(photographer=photographer),
         }
         return render(request, 'photographer/photographer_details.html', context)
 

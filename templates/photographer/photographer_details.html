@@ -55,7 +55,7 @@
                     <div class="carousel-inner">
 
                         {% for portfolio_photo in portfolio_photos %}
-                            {% if forloop.counter is 1 %}
+                            {% if forloop.counter == 1 %}
                                 <div class="carousel-item active">
                                     <img src="{{ portfolio_photo.photo.url }}" class="d-block w-100"
                                          alt="...">
@@ -100,7 +100,11 @@
                 <div class="card-body">
                     <div class="input-group">
 
-                        <button class="btn btn-primary">Book Now</button>
+                        <a class="btn btn-primary" href="{% url 'customer:book-photographer' photographer.id %}">Book Now</a>
+
+                        {% for package in packages %}
+                            <p> {{ package.name }} {{ package.description }} {{ package.fee }}</p>
+                        {% endfor %}
 
                     </div>
                 </div>
