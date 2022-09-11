@@ -6,37 +6,43 @@ from .models import *
 # Create your views here.
 
 def home(request):
-    if 'phone' in request.session:
+    if 'phone' not in request.session:
+        return redirect(reverse('authentication_module:login'))
+    else:
         photographer = Photographer.objects.get(phone=request.session['phone'])
         context = {
             'photographer': photographer,
         }
-    else:
-        context = {}
-    return render(request, 'photographer/dashboard.html', context)
+        return render(request, 'photographer/dashboard.html', context)
 
 
 def photographer_details(request, id):
-    print('this function called')
-    print(id)
+    if 'phone' not in request.session:
+        return redirect(reverse('authentication_module:login'))
+    else:
+        print('this function called')
+        print(id)
 
-    photographer = Photographer.objects.get(id=id)
+        photographer = Photographer.objects.get(id=id)
 
-    context = {
-        'photographer': photographer,
-        'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
-    }
-    return render(request, 'photographer/photographer_details.html', context)
+        context = {
+            'photographer': photographer,
+            'portfolio_photos': Portfolio.objects.filter(photographer=photographer),
+        }
+        return render(request, 'photographer/photographer_details.html', context)
 
 
 def add_portfolio_photo(request):
-    photo = request.FILES['photo']
-    caption = request.POST['caption']
+    if 'phone' not in request.session:
+        return redirect(reverse('authentication_module:login'))
+    else:
+        photo = request.FILES['photo']
+        caption = request.POST['caption']
 
-    # fetch from session cookie
-    photographer = Photographer.objects.get(phone=request.session['phone'])
+        # fetch from session cookie
+        photographer = Photographer.objects.get(phone=request.session['phone'])
 
-    portfolio = Portfolio(photographer=photographer, caption=caption, photo=photo)
-    portfolio.save()
+        portfolio = Portfolio(photographer=photographer, caption=caption, photo=photo)
+        portfolio.save()
 
-    return redirect(reverse('photographer:home'))
+        return redirect(reverse('photographer:home'))
