@@ -55,6 +55,8 @@ class Photography_Package(models.Model):
     description = models.CharField(max_length=400)
     fee = models.IntegerField()
 
+    def __str__(self):
+        return str(self.photographer) + " | " + self.name
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)

@@ -51,3 +51,17 @@ def add_portfolio_photo(request):
         portfolio.save()
 
         return redirect(reverse('photographer:home'))
+
+
+def add_photography_package(request):
+    if request.method == "POST":
+        name = request.POST['package_name']
+        desc = request.POST['package_desc']
+        fee = request.POST['fee']
+
+        photographer = Photographer.objects.get(phone=request.session['phone'])
+
+        package = Photography_Package(photographer=photographer, name=name, fee=fee, description=desc)
+        package.save()
+
+        return redirect(reverse('photographer:home'))
