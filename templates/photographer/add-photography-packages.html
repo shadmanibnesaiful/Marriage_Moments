@@ -1,0 +1,20 @@
+
+<form class="row row-cols-lg-auto g-3 align-items-center mt-3" method="post" action="{% url 'photographer:add-package' %}">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" name="package_name" placeholder="Package Name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="package_desc" placeholder="Description">
+        </div>
+
+        <div class="col">
+            <input type="number" class="form-control" name="fee" placeholder="Fee">
+        </div>
+
+
+    </div>
+
+    <button type="submit" class="btn btn-outline-success"> Add Package </button>
+</form>
