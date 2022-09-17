@@ -36,7 +36,7 @@ In order to install the project in the local machine. At first the code needs to
 
 This can be done using the following command.
 ``` bash
-git clone https://github.com/muhammadnasif/Hotel-Management-System.git
+git clone https://github.com/shadmanibnesaiful/Marriage_Moments.git
 ```
 
 After cloning from the remote-repo in the local machine. The next step is to install the requirements in the machine. It is generally **RECOMMENDED** to install the requirements in a *VIRTUAL ENVIRONMENT*. At first open a terminal inside the directory of the cloned repo.
