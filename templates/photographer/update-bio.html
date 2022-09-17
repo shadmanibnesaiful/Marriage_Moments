@@ -1,0 +1,16 @@
+{% load static %}
+
+<form action="{% url 'photographer:update-bio' %}" method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-3">
+            <input type="text" class="form-control" name="bio">
+
+        </div>
+        <div class="col-3">
+            <button type="submit" class="btn btn-outline-primary">Update Bio</button>
+        </div>
+
+    </div>
+
+</form>

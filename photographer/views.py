@@ -13,6 +13,7 @@ def home(request):
         context = {
             'photographer': photographer,
             'orders': Order.objects.filter(package__photographer=photographer),
+            'packages': Photography_Package.objects.filter(photographer=photographer),
         }
         return render(request, 'photographer/dashboard.html', context)
 
@@ -65,3 +66,28 @@ def add_photography_package(request):
         package.save()
 
         return redirect(reverse('photographer:home'))
+
+
+def delete_package(request):
+    if request.method == "POST":
+        id = request.POST['package_id']
+
+        package = Photography_Package.objects.get(id=id)
+        package.delete()
+
+        print('package deleted')
+
+    return redirect(reverse('photographer:home'))
+
+
+def update_bio(request):
+    if request.method == 'POST':
+        bio = request.POST['bio']
+
+        photographer = Photographer.objects.get(phone=request.session['phone'])
+        photographer.bio = bio
+
+        photographer.save()
+
+
+    return redirect(reverse('photographer:home'))
